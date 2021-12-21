@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practica-8</title>
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="tus palabras clave, aqui" />
+	<meta name="description" content="breve descripcion del sitio" />
+	<meta name="author" content="autor del documento" />
+	<meta http-equiv="refresh" content="30" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet"  href="ejercicio1_plantilla.css"  />
+	<style type="text/css">
+		table.precio, tr, th, td{
+			border:1px solid;
+			border-collapse: collapse;
+			padding: 10px;
+		}
+		.first-row{
+			background-color: lightyellow;
+		}
+		.third-row{
+			background-color: lightyellow;
+		}
+		/*.fourth-row{
+			background-color: yellow;
+		}*/
+		.first{
+			background-color: lightblue;
+			text-align: center;
+		}
+		.cabeza{
+			background: url(imagenes/fondo_gris.gif);
+		}
+
+	</style>
+</head>
+<body>
+<table class="precio">
+	<thead>
+		<tr class="cabeza">
+			<th>Cambio</th>
+			<th>Compra</th>
+			<th>Venta</th>
+			<th>Maximo</th>
+			<th>Minimo</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="first-row">
+			<td class="first"><img src="imagenes/euro.png" /> Euro/Dolar</td>
+			<td>1.2524</td>
+			<td>1.2527</td>
+			<td>1.2539</td>
+			<td>1.2488</td>
+		</tr>
+		<tr>
+			<td class="first"><img src="imagenes/dolar.png" /> Dolar/Yen</td>
+			<td>119.01</td>
+			<td>119.05</td>
+			<td>119.82</td>
+			<td>119.82</td>
+		</tr>
+		<tr class="third-row">
+			<td class="first"><img src="imagenes/libra.png" /> Libra/Dolar</td>
+			<td>1.8606</td>
+			<td>1.8611</td>
+			<td>1.8651</td>
+			<td>1.8522</td>
+		</tr>
+		<tr class="fourth-row">
+			<td class="first"><img src="imagenes/yen.png" /> Yen/Euro</td>
+			<td>0.6711</td>
+			<td>0.6705</td>
+			<td>0.6676</td>
+			<td>0.6713</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

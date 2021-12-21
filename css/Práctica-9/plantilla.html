@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejercicio 9 - Formulario de alta</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="tus palabras clave, aqui" />
+<meta name="description" content="breve descripcion del sitio" />
+<meta name="author" content="autor del documento" />
+<meta http-equiv="refresh" content="30" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet"  href="ejercicio1_plantilla.css"  />
+<style type="text/css">
+  form{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+li{
+  display: block;
+  width: 80%;
+  list-style: none;
+  padding: 3em;
+}
+  label.titulo{
+    width: 7%;
+    height: 10%;
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    clear: left;
+  }
+  .titulo.nombre{
+    margin-bottom:5em;
+  }
+  .titulo.direccion{
+    margin-bottom:5em;
+  }
+  .titulo.email{
+    margin-bottom:1em;
+  }
+  .titulo.tel{
+    margin-bottom:3em;
+  }
+  span.completo, span.mitad,span.dir,span.sel{
+    padding: 0.3em 0;
+    width: 15%;
+  }
+  input{
+    display: block;
+    padding: 0.5em;
+  }
+  select{
+    padding: 0.5em;
+  }
+  span.dir{
+    float: left;
+  }
+  span.requerido{
+    color: red;
+  }
+  .cod{
+    padding: 0.5em 0;
+  }
+  .mun{
+    float: none;
+    clear: both;
+    margin-left: 7%;
+  }
+  span.sel select{
+    display: block;
+  }
+  span.sel{
+    float: left;
+  }
+  span.correo{
+    clear: both;
+    float: none;
+  }
+  li:hover .ayuda{
+    display: block;
+    background-color: lightyellow;
+  }
+  li:hover{
+    background-color: lightyellow;
+  }
+  span.mitad{
+    float: left;
+  }
+  .botones{
+    clear: both;
+    float: right;
+  }
+  .ayuda{
+    float: right;
+    display: none;
+  }
+  li.botones:hover{
+    background-color: transparent;
+  }
+  li.fon{
+    padding: 4em 4em 4em 2em;
+  }
+</style>
+</head>
+
+<body>
+<div id="contenedor">
+ 
+<h2>Formulario de alta</h2>
+ 
+<form method="post" action="#">
+<ul>
+<li>
+  <label class="titulo nombre" for="nombre">Nombre y apellidos <span class="requerido">*</span></label>
+  <div>
+    <span class="completo">
+      <input id="nombre" name="nombre" value="" size="35" />
+      <label for="nombre">Nombre</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="apellido1" name="apellido1" value="" size="35" />
+      <label for="apellido1">Primer apellido</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="apellido2" name="apellido2" value="" size="35" />
+      <label for="apellido2">Segundo apellido</label>
+    </span>
+  </div>
+ 
+  <p class="ayuda">No te olvides de escribir tambi&eacute;n tu segundo apellido</p>
+</li>
+ 
+<li>
+  <label class="titulo direccion" for="direccion">Direcci&oacute;n <span class="requerido">*</span></label>
+ 
+  <div>
+    <span class="completo">
+      <input id="direccion" name="direccion" value="" size="35" />
+      <label for="direccion">Calle, n&uacute;mero, piso, puerta</label>
+    </span>
+
+    <div class="cod">
+      <span class="tercio dir">
+      <input id="codigopostal" name="codigopostal" value="" class="cod" />
+      <label for="codigopostal">C&oacute;digo postal</label>
+    </span>
+ 
+    <span class="dostercios dir">
+      <input id="municipio" name="municipio" value="" class="mun" />
+      <label for="municipio">Municipio</label>
+    </span>
+    </div>
+    <div class="mun">
+      <span class="tercio sel">
+      <select id="provincia" name="provincia">
+        <option value="" selected="selected">-selecciona-</option>
+        <option value="provincia1">Provincia 1</option>
+        <option value="provincia2">Provincia 2</option>
+        <option value="provincia3">Provincia 3</option>
+      </select>
+      <label for="provincia">Provincia</label>
+    </span>
+ 
+    <span class="dostercios sel">
+      <select id="pais" name="pais">
+        <option value="" selected="selected">--selecciona pais--</option>
+        <option value="pais1">Pa&iacute;s 1</option>
+        <option value="pais2">Pa&iacute;s 2</option>
+        <option value="pais3">Pa&iacute;s 3</option>
+      </select>
+      <label for="pais">Pa&iacute;s</label>
+    </span>
+    </div>
+  </div>
+ 
+  <p class="ayuda">El c&oacute;digo postal es imprescindible para poder recibir los pedidos</p>
+</li>
+ 
+<li>
+  <label class="titulo email" for="email">Email</label>
+ 
+  <div>
+    <span class="completo correo">
+      <input id="email" name="email" value="" size="35" />
+    </span>
+  </div>
+ 
+  <p class="ayuda">Aseg&uacute;rate de que sea v&aacute;lido</p>
+</li>
+ 
+<li class="fon">
+  <label class="titulo tel" for="telefonofijo">Tel&eacute;fono <span class="requerido">*</span></label>
+ 
+  <div class="contacto">
+    <span class="mitad">
+      <input id="telefonofijo" name="telefonofijo" value="" size="17" >
+      <label for="telefonofijo">Fijo</label>
+    </span>
+ 
+    <span class="mitad">
+      <input id="telefonomovil" name="telefonomovil" value="" size="17" />
+      <label for="telefonomovil">M&oacute;vil</label>
+    </span>
+  </div>
+ 
+  <p class="ayuda">Sin prefijo de pa&iacute;s y sin espacios en blanco</p>
+   
+</li>
+
+<li class="botones">
+  <input id="alta" type="submit" value="Darme de alta &rarr;" />
+</li>
+ 
+</ul>
+</form>
+ 
+</div>
+</body>
+</html>
